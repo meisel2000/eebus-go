@@ -51,37 +51,6 @@
           <div></div>
         </div>
       </div>
-      <div v-if="'' < ski">
-        <h3>Production Limit</h3>
-        <div class="form-line">
-          <label>Active:</label>
-          <input type="checkbox" v-model="dd[ski]['LPP'].IsActive"/>
-
-          <label>Dimmed Value [W]:</label>
-          <input type="number" v-model="dd[ski]['LPP'].Value" />
-          <button class="three-lines" type="button" @click="setProductionLimit">Set</button>
-          
-          <label>Dimmed Duration [s]:</label>
-          <input type="number" v-model="dd[ski]['LPP'].Duration" />
-          
-          <label>Failsafe Value [W]:</label>
-          <input type="number" v-model="dd[ski]['LPP'].FSValue" />
-          <button type="button" @click="setProductionFailsafeLimit">Set</button>
-          
-          <label>Failsafe Duration [s]:</label>
-          <input type="number" v-model="dd[ski]['LPP'].FSDuration" />
-          <button type="button" @click="setProductionFailsafeDuration">Set</button>
-          
-          <label>Nominal Maximum [W]:</label>
-          <input type="number" v-model="productionNominalMax" />
-          <div></div>
-
-          <label>Heartbeat:</label>
-          <span v-bind:class = "(productionHeartbeat)?'pulse heartbeat':'pulse'">&#9673;</span>
-          <!-- <button type="button" @click="toggleProductionHeartbeat">{{ productionHeartbeatEnabled ? 'Stop' : 'Start' }}</button> -->
-          <div></div>
-        </div>
-      </div>
     </div>
   </div>
 </template>

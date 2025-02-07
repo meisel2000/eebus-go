@@ -203,8 +203,8 @@ func (h *controlbox) run() {
 	h.uclpc = lpc.NewLPC(localEntity, h.OnLPCEvent)
 	h.myService.AddUseCase(h.uclpc)
 
-	h.uclpp = lpp.NewLPP(localEntity, h.OnLPPEvent)
-	h.myService.AddUseCase(h.uclpp)
+	//h.uclpp = lpp.NewLPP(localEntity, h.OnLPPEvent)
+	//h.myService.AddUseCase(h.uclpp)
 
 	h.remoteEntities = map[spineapi.EntityRemoteInterface][]string{}
 
